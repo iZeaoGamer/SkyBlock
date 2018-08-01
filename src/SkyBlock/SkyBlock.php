@@ -184,31 +184,31 @@ class SkyBlock extends PluginBase {
         }
         return $result;
     }
-    public function translateColors($symbol, $message){
-	    $message = str_replace($symbol . "0", TextFormat::BLACK, $message);
-	    $message = str_replace($symbol . "1", TextFormat::DARK_BLUE, $message);
-	    $message = str_replace($symbol . "2", TextFormat::DARK_GREEN, $message);
-	    $message = str_replace($symbol . "3", TextFormat::DARK_AQUA, $message);
-	    $message = str_replace($symbol . "4", TextFormat::DARK_RED, $message);
-	    $message = str_replace($symbol . "5", TextFormat::DARK_PURPLE, $message);
-	    $message = str_replace($symbol . "6", TextFormat::GOLD, $message);
-	    $message = str_replace($symbol . "7", TextFormat::GRAY, $message);
-	    $message = str_replace($symbol . "8", TextFormat::DARK_GRAY, $message);
-	    $message = str_replace($symbol . "9", TextFormat::BLUE, $message);
-	    $message = str_replace($symbol . "a", TextFormat::GREEN, $message);
-	    $message = str_replace($symbol . "b", TextFormat::AQUA, $message);
-	    $message = str_replace($symbol . "c", TextFormat::RED, $message);
-	    $message = str_replace($symbol . "d", TextFormat::LIGHT_PURPLE, $message);
-	    $message = str_replace($symbol . "e", TextFormat::YELLOW, $message);
-	    $message = str_replace($symbol . "f", TextFormat::WHITE, $message); 
-	    $message = str_replace($symbol . "k", TextFormat::OBFUSCATED, $message);
-	    $message = str_replace($symbol . "l", TextFormat::BOLD, $message);
-	    $message = str_replace($symbol . "m", TextFormat::STRIKETHROUGH, $message);
-	    $message = str_replace($symbol . "n", TextFormat::UNDERLINE, $message);
-	    $message = str_replace($symbol . "o", TextFormat::ITALIC, $message);
-	    $message = str_replace($symbol . "r", TextFormat::RESET, $message);
-	    return $message;
-	}
+    public static function translateColors(string $message): string {
+        $message = str_replace("{BLACK}", "§0", TextFormat::BLACK, $message);
+        $message = str_replace("{DARK_BLUE}", "§1", TextFormat::DARK_BLUE, $message);
+        $message = str_replace("{DARK_GREEN}", "§2", TextFormat::DARK_GREEN, $message);
+        $message = str_replace("{DARK_AQUA}", "§3", TextFormat::DARK_AQUA, $message);
+        $message = str_replace("{DARK_RED}", "§4", TextFormat::DARK_RED, $message);
+        $message = str_replace("{DARK_PURPLE}", "§5", TextFormat::DARK_PURPLE, $message);
+        $message = str_replace("{ORANGE}", "§6", TextFormat::GOLD, $message);
+        $message = str_replace("{GRAY}", "§7", TextFormat::GRAY, $message);
+        $message = str_replace("{DARK_GRAY}", "§8", TextFormat::DARK_GRAY, $message);
+        $message = str_replace("{BLUE}", "§9", TextFormat::BLUE, $message);
+        $message = str_replace("{GREEN}", "§a", TextFormat::GREEN, $message);
+        $message = str_replace("{AQUA}", "§b", TextFormat::AQUA, $message);
+        $message = str_replace("{RED}", "§c", TextFormat::RED, $message);
+        $message = str_replace("{LIGHT_PURPLE}", "§d", TextFormat::LIGHT_PURPLE, $message);
+        $message = str_replace("{YELLOW}", "§e", TextFormat::YELLOW, $message);
+        $message = str_replace("{WHITE}", "§f", TextFormat::WHITE, $message);
+        $message = str_replace("{OBFUSCATED}", "§k", TextFormat::OBFUSCATED, $message);
+        $message = str_replace("{BOLD}", "§l", TextFormat::BOLD, $message);
+        $message = str_replace("{STRIKETHROUGH}", "§m", TextFormat::STRIKETHROUGH, $message);
+        $message = str_replace("{UNDERLINE}", "§n", TextFormat::UNDERLINE, $message);
+        $message = str_replace("{ITALIC}", "§o", TextFormat::ITALIC, $message);
+        $message = str_replace("{RESET}", "§r", TextFormat::RESET, $message);
+        return $message;
+    }
     
     /**
      * @return string
